@@ -4,7 +4,7 @@ from collections import deque
 input_str = get_input(6)
 
 buffer_one = deque(input_str[:4])
-buffer_two = deque(input_str[:14])
+buffer_two = deque(input_str[:4])
 
 answer_one = answer_two = None
 
@@ -24,6 +24,6 @@ for i, s in enumerate(input_str[4:]):
 
     if len(buffer_two) == 14:
         buffer_two.popleft()
-        buffer_two.append(s)
+    buffer_two.append(s)
 
 print("no answer!")
