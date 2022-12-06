@@ -13,10 +13,8 @@ for i, s in enumerate(input_str[4:]):
     if answer_one is None and len(set(buffer_one)) == 4:
         answer_one = i
     
-    if answer_two is None and len(set(buffer_two)) == 14:
+    if len(set(buffer_two)) == 14:
         answer_two = i
-
-    if answer_one and answer_two:
         print(answer_one)
         print(answer_two)
         exit()
