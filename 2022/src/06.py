@@ -12,13 +12,13 @@ for i, s in enumerate(input_str[4:]):
     i = i + 4
     if answer_one is None and len(set(buffer_one)) == 4:
         answer_one = i
-    
+
     if len(set(buffer_two)) == 14:
         answer_two = i
         print(answer_one)
         print(answer_two)
         exit()
-    
+
     buffer_one.popleft()
     buffer_one.append(s)
 
