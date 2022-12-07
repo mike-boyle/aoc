@@ -25,10 +25,7 @@ for line in lines:
 sum2 = 0
 for i in range(int(len(lines) / 3)):
     i = i * 3
-    group = lines[i : i + 3]
-    s = set(group[0])
-    s = s.intersection(set(group[1]))
-    s = s.intersection(set(group[2]))
+    s = set.intersection(*map(set, lines[i : i + 3]))
 
     if len(s) != 1:
         print("something went wrong")
